@@ -1,5 +1,6 @@
 @import "tailwindcss";
-
+/* 테일윈드4 커스텀 다크 모드 */
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,5 +26,3 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 테일윈드4 커스텀 다크 모드 */
-@custom-variant dark (&:where(.dark, .dark *));
