@@ -5,8 +5,8 @@ import Link from "next/link";
 // useSearchParams 훅을 사용하여 현재 URL의 쿼리 파라미터를 가져옵니다. 이 훅은 Next.js에서 제공하는 기능으로, 클라이언트 측에서 URL의 쿼리 파라미터를 쉽게 읽을 수 있게 해줍니다.
 import { useSearchParams } from "next/navigation";
 
-export default function NavbarItem({ title, param }) {
-  const searchParams = useSearchParams();
+export default async function NavbarItem({ title, param }) {
+  const searchParams = await useSearchParams();
   // useSearchParams 훅을 사용하여 searchParams 객체를 가져옵니다. 이 객체를 통해 현재 URL의 쿼리 파라미터에 접근할 수 있습니다.
   // 쿼리 파라미터는 URL에서 ? 뒤에 오는 key=value 형태의 데이터를 말합니다. 예를 들어, http://example.com/?genre=action 이라는 URL이 있다면, searchParams.get("genre")를 호출하면 "action"이라는 값을 얻을 수 있습니다.
   const genre = searchParams.get("genre");
